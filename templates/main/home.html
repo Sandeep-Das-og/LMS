@@ -77,7 +77,7 @@
                                                 <li><a href="/contactus">Contact us</a></li>
                                                 {% if user.is_authenticated %}
                                                     <li class="button-header margin-left "><a href="/auth/signup" class="btn">{{ user.first_name }}</a></li>
-                                                    <li class="button-header"><a href="/auth/login" class="btn btn3">Logout</a></li>
+                                                    <li class="button-header"><a href="/auth/logout" class="btn btn3">Logout</a></li>
                                                 {% else %}
                                                     <li class="button-header margin-left "><a href="/auth/signup" class="btn">Register</a></li>
                                                     <li class="button-header"><a href="/auth/login" class="btn btn3">Log in</a></li>
@@ -110,7 +110,9 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay="0.2s">Learning Management <br> system</h1>
                                     <p data-animation="fadeInLeft" data-delay="0.4s">Get future ready with skills, courses and certificates online from top-class instructors </p>
-                                    <a href="/auth/login" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Register Today</a>
+                                    {% if not user.is_authenticated %}
+                                        <a href="/auth/login" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Register Today</a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

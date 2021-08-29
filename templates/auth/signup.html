@@ -65,20 +65,20 @@
 
                     <label for="id_first_name" style="font-size:larger">&#x1f466; First
                         name</label>
-                    <input type="text" name="name" placeholder="First name">
+                    <input id="id_first_name" type="text" name="first_name" placeholder="First name" maxlength="255" required>
 
                     <label for="id_last_name" style="font-size:larger">&#x1f466; Last name</label>
-                    <input type="text" name="name" placeholder="Last name">
+                    <input id="id_last_name" type="text" name="last_name" placeholder="Last name" maxlength="255" required>
 
                     <label for="id_email" style="font-size:larger"> &#x1f4e7; Email Address</label>
-                    <input type="email" name="email" placeholder="Email Address">
+                    <input id="id_email" type="email" name="email" placeholder="Email Address" maxlength="255" required>
 
-                    <label for="id_form.password1" style="font-size:larger">&#128274; Password</label>
-                    <input type="password" name="password1" placeholder="Password">
+                    <label for="id_password1" style="font-size:larger">&#128274; Password</label>
+                    <input id="id_password1" type="password" name="password1" placeholder="Password" required>
 
-                    <label for="id_form.password2" style="font-size:larger"> &#128274;Confirm
+                    <label for="id_password2" style="font-size:larger"> &#128274;Confirm
                         Password</label>
-                    <input type="password" name="password2" placeholder="Confirm Password">
+                    <input id="id_password2" type="password" name="password2" placeholder="Confirm Password" required>
 
                 </div>
 
@@ -101,7 +101,7 @@
                 </div>
 
                 {% if form.errors %}
-                    <p style="margin-top: 10px; color: white; background-color: red">Please try again.</p>
+                    <p style="margin-top: 10px; color: white; background-color: red">Please try signing up again.</p>
                 {% endif %}
 
                 <a href="/auth/login" class="registration">Login</a>

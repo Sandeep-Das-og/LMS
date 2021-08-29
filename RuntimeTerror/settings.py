@@ -137,5 +137,6 @@ STATICFILES_DIRS = [
 
 # redirect from login page
 LOGIN_REDIRECT_URL = '/students/catalog'
+LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
